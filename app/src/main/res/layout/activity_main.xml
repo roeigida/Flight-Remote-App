@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <SeekBar
+            android:id="@+id/rudder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/throttle"
+    />
+
+    <SeekBar
+
+            android:id="@+id/throttle"
+            android:layout_width="336dp"
+            android:layout_height="71dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="-153dp"
+            android:layout_marginLeft="-153dp"
+            android:layout_marginBottom="130dp"
+            android:rotation="270" />
+
+    <EditText
+            android:id="@+id/port"
+            android:layout_width="221dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/IP"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Port"
+            android:autofillHints="port" />
+
+    <EditText
+            android:id="@+id/IP"
+            android:layout_width="221dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="@string/IP"
+            android:autofillHints="ip" />
+
+    <Button
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connect"
+            android:layout_below="@id/port"
+            android:layout_centerHorizontal="true"
+            android:onClick="onConnect"
+
+    />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlightRemote</string>
+    <string name="port">port</string>
+    <string name="IP">IP</string>
+    <string name="Port">Port</string>
+    <string name="connect">connect</string>
+</resources>
