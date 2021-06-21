@@ -31,19 +31,15 @@ class ViewModel {
     }
 
 
-    fun setAileron(aileron: Int) {
-        var value = aileron.toDouble() - 50
-        value /= 50
+    fun setAileron(aileron: Float) {
         Thread {
-            model.sendToServer("/flight/aileron $value\r\n")
+            model.sendToServer("/flight/aileron $aileron\r\n")
         }.start()
     }
 
-    fun setElevator(elevator: Int) {
-        var value = elevator.toDouble() - 50
-        value /= 50
+    fun setElevator(elevator: Float) {
         Thread {
-            model.sendToServer("/flight/elevator $value\r\n")
+            model.sendToServer("/flight/elevator ${-1*elevator}\r\n")
         }.start()
     }
 
