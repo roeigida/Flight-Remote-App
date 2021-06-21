@@ -14,9 +14,6 @@ import kotlin.math.min
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-/**
- * Created by Daniel on 7/25/2016.
- */
 class JoystickView : SurfaceView, SurfaceHolder.Callback, OnTouchListener {
     private var centerX = 0f
     private var centerY = 0f

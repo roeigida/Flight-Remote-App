@@ -11,16 +11,16 @@ class Model {
     private lateinit var out: PrintWriter
 
     fun createSock(ip: String, port: String):Boolean {
-        try {
+        return try {
             client = Socket()
             client.connect(InetSocketAddress(ip, port.toInt()))
             out = PrintWriter(client.getOutputStream(), true)
             isConnected = true
-            return isConnected
+            isConnected
         } catch (e: Exception) {
             e.printStackTrace()
             isConnected = false
-            return isConnected
+            isConnected
 
         }
 

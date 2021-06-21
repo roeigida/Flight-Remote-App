@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/throttle"
-            android:progress="50"
+            android:progress="54"
     />
 
 
@@ -70,15 +70,17 @@
             android:id="@+id/middle"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/rudder"
-    />
-
+            android:contentDescription="@string/middle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="171dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="171dp"/>
 
     <com.example.flightremote.JoystickView
             android:layout_width="300dp"
             android:layout_centerHorizontal="true"
             android:layout_height="300dp"
-            android:id="@+id/joystack"
-
+            android:id="@+id/joystick"
             android:layout_above="@id/rudder"
             android:layout_marginBottom="20dp"
 
