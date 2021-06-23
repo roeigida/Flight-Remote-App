@@ -5,7 +5,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".MainActivity"
+                tools:context=".View"
                 xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <SeekBar
@@ -74,7 +74,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="171dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="180dp"/>
+            android:layout_marginEnd="170dp"/>
 
     <com.example.flightremote.JoystickView
             android:layout_width="300dp"

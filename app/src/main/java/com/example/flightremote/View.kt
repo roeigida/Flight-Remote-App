@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
-class MainActivity : AppCompatActivity(), JoystickView.JoystickListener {
+class View : AppCompatActivity(), JoystickView.JoystickListener {
     private var viewModel: ViewModel = ViewModel()
 
     @SuppressLint("ClickableViewAccessibility")
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), JoystickView.JoystickListener {
 
         if (ip.isEmpty() || port.isEmpty()) {
             Toast.makeText(
-                this@MainActivity,
+                this@View,
                 "Didn't enter IP or Port",
                 Toast.LENGTH_SHORT
             ).show()
