@@ -33,7 +33,7 @@ The business logic implemented in:
 * Model class
 
 This classes can communicate via the ViewModel class that constitutes as an abstract Model layer to the View and as an abstract View layer to the Model.
-You can see more information about the class hierarchy in [UML](https://github.com/tomershay100/Flight-Inspection-App/blob/main/UML%20Diagram.pdf).
+You can see more information about the class hierarchy in [UML](https://github.com/roeigida/FlightRemote/blob/master/FlightRemoteApp%20UML.pdf).
 
 ### Features
 * **Upload CSV File:** When the user clicks the ```Upload CSV Test File```  and uploads CSV file, the flight will start and the flightgear simulator will show the flight according to the uploaded file.
