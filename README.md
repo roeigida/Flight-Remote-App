@@ -36,49 +36,14 @@ This classes can communicate via the ViewModel class that constitutes as an abst
 You can see more information about the class hierarchy in [UML](https://github.com/roeigida/FlightRemote/blob/master/FlightRemoteApp%20UML.pdf).
 
 ### Features
-* **Upload CSV File:** When the user clicks the ```Upload CSV Test File```  and uploads CSV file, the flight will start and the flightgear simulator will show the flight according to the uploaded file.
-* **Graphs Tab:** When the flight starts, a new tab opens. In this tab, the user can see graphs of every flight data feature and it's correlated feature.
-* **DLL uploading:** The user can upload any annomly detection alogithem and the results will apear on a graph.
-* **Flight Features Graphs:** The user can select a feature and its graph will be shown.
-* **Joystick:** The ```Elevator``` and ```Aileron``` feature represented as joystick on Y-pos and X-pos **accordingly**.
-* **Video panel:** The flight is shown as a movie:
-    - Back Button:    Brings the flight to the start.
-    - Rewind Button:  Brings the flight 7.5 seconds back.
-    - Pause Button:   Stops the flight.
-    - Play Button:    If paused or stopped, start playing from the same spot that stoped.
-    - Stop Button:    Stops the flight and brings the flight to the start.
-    - Forward Button: Brings the flight 7.5 seconds ahead.
-    - Skip Button:    Brings the flight to the end.
-    - Play Speed:     Enable the user to decide ehat speed hw eants to see the flight.
-    - Slider:         Enable the user to jump forwards and backward.
-* **Upload Several Test Files:** The user can upload as many test files as he wants. The last flight will stop and the next will start.
+* **Connect button** When the user clicks on ```connect``` button, a connection is made to the FlightGear server using the entered IP and PORT addresses.
+* **Start engine:** When clicking the ```Start Engine``` button the planes' engine will start.
+* **SeekBars:** When moving the horizontal ```seek bar``` the user can control the rudder and by moving the vertical ```seek bar``` the user can control the throttle.
+* **Joystick:** Joystick: When moving the ```Joystick``` up and down the user can control the elevator value and by moving the joystick to the sides you can control the aileron value.
 
 For more features explanations, you can watch [this video](https://youtu.be/t_-Bs4jf07Y).
 
-### Create DLL
-You can create annomly detection DLL according to the following API:
-* The DLLs' namespace must have the same name as the DLLs' name.
-* The Object that in charges of the anomalies must be called AnomalyManager and its class must contain the following functions:
-```c#
-public class AnomalyManager() {
 
-    public AnomalyManager(); // Constructor to AnomalyManager class.
-
-    public void UploadTrain(string file); // Uploads the normal flight.
-
-    public void UploadTest(string file); // Uploads the test flight.
-
-    public void Learn(); // Learns the normal flight.
-
-    public void Detect(); // Detect anomalies from the test flight.
-
-    public OxyPlot.PlotModel GetShape(string _currColumn); // Returns a PlotModel that emphasizes the anomalies points in a relation to your detection algorithm.
-  
-    public string GetCorrelated(string _currColumn); // Returns the most correlative column according to the algorithm.
-  
-    public Tuple<List<string>, List<int>> GetAnomalies(string _currColumn); // Returns a Tuple of Lists. The first will be the descriptions of the anomalies and the second will be the line numbers of the anomalies.
-}
-```
 ## Dependencies
 1. [FlightGear](https://www.flightgear.org/download/)
 2. [.NET 5.0](https://dotnet.microsoft.com/download/dotnet-framework/net48)
@@ -90,7 +55,7 @@ public class AnomalyManager() {
      ```
     $ cd C:\Program Files\FlightGear 2020.3.6
     $ cd bin
-    $ start fgfs.exe --generic=socket,in,10,127.0.0.1,5400,tcp,playback_small --fdm=null
+    $ start fgfs.exe --telnet=socket,in,10,127.0.0.1,5400,tcp
     ```
    Notice that ```C:\Program Files\FlightGear 2020.3.6``` is the path to the place where you download the FlightGear.
 
