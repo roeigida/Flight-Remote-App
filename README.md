@@ -1,4 +1,4 @@
-# Flight-Inspection-App
+# Flight-Remote-App
 
 #### Contributes
 * Tomer Shay
@@ -16,28 +16,21 @@ This is an android application for controlling FlightGear flight simulator.
 
 ## General
 ### Background
-This application displays filght data on a simulator and investigates it. The Users are flight reserches or pilots who want to view data that sampled at certain rate during a flight.
-The flight data includes the steering mode, speed, direction etc, and recorded into a csv file which can be loaded to the application.
-Tha app plays the data like a movie. It graphically shows - the plane relative to earth (on FlightGear), the rudder status, and additional filght data, including a view designed to find anomalies in the data.
+This application connect to FlightGear, flight simulator, and let the user control the planes' velocity and directions while the simulator displays the flight.  
 
 ### Project Description
-The application inerfaces with the FlightGear simulator (instruction for download at [Dependencies](#dependencies)) and they work side-by-side. The idea is that the user will upload a normal flight file (e.g. _train) file_. The program will learn the normal flight and then the user will upload any flight file (e.g. _test file_). The program will simulate the _test file_ as a movie on the screen through the FlightGear simulator. The application will display video pannel which gives the user the ability to control the flight simulation by pressing the play and pause buttons, change the playback speed and drag the slider to every part of the flight . Furthermore, the application presents important flight data (**yaw, pitch, airspeed** etc) and graphs, which represent the flight data of a specific chosen featre, from the beggining to the current time of the simulation.
+  
+The application interfaces with the FlightGear simulator (instruction for download at [Dependencies](#dependencies)) and they work side-by-side. The idea is that the user will connect to flightGear simulator with the FlightGears' IP and Port and will control the plane through the controls the app displays. the application will let the user control the throttle, aileron, rudder and the elevator.
 
-### Project Stucture
+
+### Project Structure
 This project designed according to MVVM architecture. The classes can be divided into two groups in order to create total segregation between the presentation logic and the business logic.
-The pressentation logic implemented in:
-* MainWindow class
-* MediaControls class
-* GraphsUS class
-* Joystick class
-* Gauges class
+The presentation logic implemented in:
+* View class
+* JoystickView class
 
 The business logic implemented in:
-* Client class
-* FlightGearClient class
-* Panel class
-* AnnomlyData class
-
+* Model class
 
 This classes can communicate via the ViewModel class that constitutes as an abstract Model layer to the View and as an abstract View layer to the Model.
 You can see more information about the class hierarchy in [UML](https://github.com/tomershay100/Flight-Inspection-App/blob/main/UML%20Diagram.pdf).
