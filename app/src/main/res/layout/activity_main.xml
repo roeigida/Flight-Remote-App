@@ -96,5 +96,33 @@
             android:onClick="onStartEngine"
 
     />
+    <TextView
+            android:text="@string/rudder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rudder_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_above="@id/rudder"
+            android:layout_marginLeft="190dp"
+            android:textColor="@color/white"
+
+            android:layout_marginStart="190dp"/>
+
+    <TextView
+            android:text="@string/throttle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/throttle_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_above="@id/throttle"
+            android:rotation="270"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_alignLeft="@id/joystick"
+
+            android:layout_alignStart="@id/joystick"
+            android:layout_marginLeft="-45dp" android:layout_marginStart="-45dp" android:layout_marginBottom="0dp"/>
 
 </RelativeLayout>

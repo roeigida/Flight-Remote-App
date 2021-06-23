@@ -6,4 +6,6 @@
     <string name="connect">connect</string>
     <string name="middle">middle</string>
     <string name="startEngine">Start Engine⚡</string>
+    <string name="rudder">Rudder</string>
+    <string name="throttle">Throttle</string>
 </resources>
