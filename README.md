@@ -9,9 +9,9 @@ This is an android application for controlling FlightGear flight simulator.
 
 1. [General](#General)
     - [Background](#background)
-    - [Project Description](https://github.com/tomershay100/Flight-Inspection-App/blob/main/README.md#project-description)
-    - [Project Stucture](https://github.com/tomershay100/Flight-Inspection-App/blob/main/README.md#project-stucture)
-    - [Features](https://github.com/tomershay100/Flight-Inspection-App/blob/main/README.md#features)
+    - [Project Description](https://github.com/roeigida/Flight-Remote-App/edit/master/README.md#project-description)
+    - [Project Stucture](https://github.com/roeigida/Flight-Remote-App/edit/master/README.md#project-stucture)
+    - [Features](https://github.com/roeigida/Flight-Remote-App/edit/master/README.md#features)
 2. [Dependencies](#dependencies)
 3. [Installation](#installation)
 
@@ -43,7 +43,7 @@ The business logic implemented in:
 
 This classes can communicate via the ViewModel class that constitutes as an abstract Model layer to the View and as an
 abstract View layer to the Model. You can see more information about the class hierarchy
-in [UML](https://github.com/roeigida/FlightRemote/blob/master/FlightRemoteApp%20UML.pdf).
+in [UML](https://github.com/roeigida/Flight-Remote-App/blob/master/FlightRemoteApp%20UML.pdf).
 
 ### Features
 
@@ -78,7 +78,7 @@ For more features explanations, you can watch [this video](https://youtu.be/t_-B
 
 3. Clone the repository from **another** command line:
     ```
-    $ git clone https://github.com/tomershay100/Flight-Inspection-App.git
+    $ git clone https://github.com/roeigida/Flight-Remote-App.git
     ```
 4. **After** running the application, check IP of the machine that is running the FlightGear. you can do it in the
    command line using the command `ifconfig` (Linux) or `ipconfig` (Windows). you should enter this IP to the "IP" field
