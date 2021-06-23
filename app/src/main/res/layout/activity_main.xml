@@ -83,7 +83,6 @@
             android:id="@+id/joystick"
             android:layout_above="@id/rudder"
             android:layout_marginBottom="20dp"
-
     />
 
 

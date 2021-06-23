@@ -3,6 +3,7 @@ package com.example.flightremote
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.PixelFormat
 import android.graphics.PorterDuff
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -51,23 +52,24 @@ class JoystickView : SurfaceView, SurfaceHolder.Callback, OnTouchListener {
             val myCanvas = this.holder.lockCanvas() //Stuff to draw
             val colors = Paint()
             myCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR) // Clear the BG
-
             //First determine the sin and cos of the angle that the touched point is at relative to the center of the joystick
             val hypotenuse =
                 sqrt((newX - centerX).toDouble().pow(2.0) + (newY - centerY).toDouble().pow(2.0))
                     .toFloat()
             val sin = (newY - centerY) / hypotenuse //sin = o/h
             val cos = (newX - centerX) / hypotenuse //cos = a/h
-
+            this.setBackgroundColor(Color.TRANSPARENT);
+            this.setZOrderOnTop(true);
+            holder.setFormat(PixelFormat.TRANSPARENT);
             //Draw the base first before shading
-            colors.setARGB(255, 100, 100, 100)
+            colors.setARGB(255, 10, 31, 40)
             myCanvas.drawCircle(centerX, centerY, baseRadius, colors)
             for (i in 1..(baseRadius / ratio).toInt()) {
                 colors.setARGB(
-                    150 / i,
-                    255,
-                    0,
-                    0
+                    255 / i,
+                    100,
+                    100,
+                    100
                 ) //Gradually decrease the shade of black drawn to create a nice shading effect
                 myCanvas.drawCircle(
                     newX - cos * hypotenuse * (ratio / baseRadius) * i,
@@ -76,10 +78,10 @@ class JoystickView : SurfaceView, SurfaceHolder.Callback, OnTouchListener {
             }
 
             //Drawing the joystick hat
-            for (i in 0..(hatRadius / ratio).toInt()) {
+            for (i in 1..(hatRadius / ratio).toInt()) {
                 colors.setARGB(
-                    255, (i * (255 * ratio / hatRadius)).toInt(),
-                    (i * (255 * ratio / hatRadius)).toInt(), 255
+                    (255/(i*1.5)).toInt(), /*(i * (255 * ratio / hatRadius)).toInt()*/6,
+                    /*(i * (255 * ratio / hatRadius)).toInt()*/230,247/* (i * (255 * ratio / hatRadius)).toInt()*/
                 ) //Change the joystick color for shading purposes
                 myCanvas.drawCircle(
                     newX,
@@ -118,8 +120,10 @@ class JoystickView : SurfaceView, SurfaceHolder.Callback, OnTouchListener {
                         id
                     )
                 }
-            } else {drawJoystick(centerX, centerY)
-            joystickCallback!!.onJoystickMoved(0f, 0f, id)}
+            } else {
+                drawJoystick(centerX, centerY)
+                joystickCallback!!.onJoystickMoved(0f, 0f, id)
+            }
         }
         return true
     }
