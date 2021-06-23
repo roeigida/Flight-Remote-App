@@ -58,9 +58,9 @@ class JoystickView : SurfaceView, SurfaceHolder.Callback, OnTouchListener {
                     .toFloat()
             val sin = (newY - centerY) / hypotenuse //sin = o/h
             val cos = (newX - centerX) / hypotenuse //cos = a/h
-            this.setBackgroundColor(Color.TRANSPARENT);
-            this.setZOrderOnTop(true);
-            holder.setFormat(PixelFormat.TRANSPARENT);
+            this.setBackgroundColor(Color.TRANSPARENT)
+            this.setZOrderOnTop(true)
+            holder.setFormat(PixelFormat.TRANSPARENT)
             //Draw the base first before shading
             colors.setARGB(255, 10, 31, 40)
             myCanvas.drawCircle(centerX, centerY, baseRadius, colors)

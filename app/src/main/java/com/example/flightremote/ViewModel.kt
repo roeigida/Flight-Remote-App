@@ -43,5 +43,9 @@ class ViewModel {
         }.start()
     }
 
-
+    fun startEngine(){
+        Thread{
+           model.startEngine()
+        }.start()
+    }
 }

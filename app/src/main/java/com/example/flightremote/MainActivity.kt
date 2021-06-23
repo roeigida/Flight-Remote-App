@@ -76,7 +76,9 @@ class MainActivity : AppCompatActivity(), JoystickView.JoystickListener {
             viewModel.connect(ip, port)
         }
     }
-
+    fun onStartEngine(view: View){
+        viewModel.startEngine()
+    }
     override fun onJoystickMoved(xPercent: Float, yPercent: Float, id: Int) {
         viewModel.setAileron(xPercent)
         viewModel.setElevator(yPercent)

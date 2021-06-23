@@ -74,7 +74,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="171dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="171dp"/>
+            android:layout_marginEnd="180dp"/>
 
     <com.example.flightremote.JoystickView
             android:layout_width="300dp"
@@ -85,5 +85,15 @@
             android:layout_marginBottom="20dp"
     />
 
+    <Button
+            android:id="@+id/startEngine"
+            android:layout_width="wrap_content"
+            android:layout_height="79dp"
+            android:text="@string/startEngine"
+            android:layout_below="@id/rudder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:onClick="onStartEngine"
 
+    />
 </RelativeLayout>
