@@ -26,8 +26,8 @@ class Model {
         }
     }
 
+    //func by Or Gottman
     fun startEngine() {
-        Log.v("engine","in func")
         if (isConnected) {
             out.print("set /consumables/fuel/tank[0]/selected 1 \r\n")
             out.flush()
