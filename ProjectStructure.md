@@ -6,7 +6,7 @@ The structure of the application is based on the MVVM Design Pattern which divid
 #### MainActivity:
 This class uses a XML file which defines the application design. It includes several buttons for connecting to the FlightGear server and to start the plane engine, user controls such as seek bars and a Joystick. This class responsible for displaying the app screen, the buttons, the fields and the controls that are used in the app. For this purpose, the class contains ViewModel and does nothing but updating the ViewModel when the user touch the controls or pressing buttons.  
 
-![image](https://user-images.githubusercontent.com/72979371/123118614-75dd3880-d44b-11eb-9da2-89f081737af7.png)  
+![image](https://user-images.githubusercontent.com/72979371/123133318-4680f880-d458-11eb-8056-618b23e37028.png)
 
 
 ## View Model

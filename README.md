@@ -55,7 +55,7 @@ in [UML](https://github.com/roeigida/Flight-Remote-App/blob/master/FlightRemoteA
 * **Joystick:** Joystick: When moving the ```Joystick``` up and down the user can control the elevator value and by
   moving the joystick to the sides you can control the aileron value.
 
-For more features explanations, you can watch [this video](https://youtu.be/t_-Bs4jf07Y).
+For more features explanations, you can watch [this video](https://youtu.be/0LCHy6QXhxc).
 
 ## Dependencies
 
