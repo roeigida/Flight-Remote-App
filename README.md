@@ -42,8 +42,8 @@ The business logic implemented in:
 * Model class
 
 This classes can communicate via the ViewModel class that constitutes as an abstract Model layer to the View and as an
-abstract View layer to the Model. You can see more information about the class hierarchy
-in [UML](https://github.com/roeigida/Flight-Remote-App/blob/master/FlightRemoteApp%20UML.pdf).
+abstract View layer to the Model. You can see more information about the class hierarchy and the project structure
+in [UML](https://github.com/roeigida/Flight-Remote-App/blob/master/FlightRemoteApp%20UML.pdf) and in [Project Sturcture](https://github.com/roeigida/Flight-Remote-App/blob/master/ProjectStructure.md).
 
 ### Features
 
