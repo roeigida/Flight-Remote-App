@@ -19,4 +19,6 @@ This class responsibles for connecting (creating the
 Socket) and sending the relevant information to the
 FlightGear. The class functions called from the
 ViewModel after it has received notifications from the
-View. For example, when clicking the start engine button, the View notifies the ViewModel that will notify the Model which will send to the FlightGear the required commands to start the engine.
+View. For example, when clicking the start engine button, the View notifies the ViewModel that will notify the Model which will send to the FlightGear the required commands to start the engine.  
+The class uses an active object. When connecting to the server the function starts a thread that executes functions from a queue that is a member of the class.  
+when the ViewModel call a function in the Model the Model enters a new function to the queue and the thread executing it.
